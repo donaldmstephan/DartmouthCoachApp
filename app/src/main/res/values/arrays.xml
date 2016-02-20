@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="city_type_array">
+        <item>Massachussetts</item>
+        <item>New Hampshire</item>
+        <item>New York</item>
+    </string-array>
+</resources>

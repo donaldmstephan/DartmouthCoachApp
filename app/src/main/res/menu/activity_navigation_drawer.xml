@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_schedule"
+            android:title="View Schedule" />
+        <item
+            android:id="@+id/nav_purchase_tickets"
+            android:title="Purchase Tickets" />
+        <item
+            android:id="@+id/nav_tracker"
+            android:title="Trip Tracker" />
+        <item
+            android:id="@+id/nav_my_tickets"
+            android:title="My Tickets" />
+    </group>
+
+    <item android:title="Preferences">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_profile"
+                android:title="Profile" />
+            <item
+                android:id="@+id/nav_payment_settings"
+                android:title="Payment Settings" />
+            </group>
+        </menu>
+    </item>
+
+</menu>
