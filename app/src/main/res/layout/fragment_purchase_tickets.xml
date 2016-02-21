@@ -5,97 +5,87 @@
     android:layout_height="match_parent"
     tools:context="com.dartmouth.cs.dartmouthcoach.ScheduleFragment">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Choose Departure State:"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:paddingTop="16dp"
-            android:paddingLeft="10dp"/>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/state_spinner"
-            android:paddingLeft="40dp">
-        </Spinner>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Departure City:"
-            android:textSize="18dp"
-            android:paddingTop="24dp"
-            android:textStyle="bold"
-            android:paddingLeft="10dp"/>
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/city_spinner"
-            android:paddingLeft="40dp">
-        </Spinner>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Destination:"
-            android:textSize="18dp"
-            android:paddingTop="24dp"
-            android:textStyle="bold"
-            android:paddingLeft="10dp"/>
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/destination_spinner"
-            android:paddingLeft="40dp">
-        </Spinner>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Departure Time:"
-            android:textSize="18dp"
-            android:paddingTop="24dp"
-            android:textStyle="bold"
-            android:paddingLeft="10dp"/>
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/departure_time_spinner"
-            android:paddingLeft="40dp">
-        </Spinner>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="80dp">
-
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Purchase"
-                android:layout_marginRight="16dp"
-                android:id="@+id/purchase_button">
-            </Button>
+                android:text="Choose Departure Location:"
+                android:textSize="18dp"
+                android:paddingTop="16dp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"/>
 
-            <Button
+            <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cancel"
-                android:id="@+id/cancel_button">
+                android:id="@+id/depature_spinner"
+                android:paddingLeft="40dp">
+            </Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arrival Location:"
+                android:textSize="18dp"
+                android:paddingTop="24dp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/arrival_spinner"
+                android:paddingLeft="40dp">
+            </Spinner>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Date"
+                android:layout_marginTop="20dp"
+                android:id="@+id/date_button">
             </Button>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Departure Time:"
+                android:textSize="18dp"
+                android:paddingTop="24dp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/departure_time_spinner"
+                android:paddingLeft="40dp">
+            </Spinner>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="80dp">
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Purchase"
+                    android:id="@+id/purchase_button">
+                </Button>
+
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 </FrameLayout>

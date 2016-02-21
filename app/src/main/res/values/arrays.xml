@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="city_type_array">
-        <item>Massachussetts</item>
-        <item>New Hampshire</item>
-        <item>New York</item>
+    <string-array name="departure_type_array">
+        <item>Logan Airport, Boston, MA</item>
+        <item>South Station, Boston, MA</item>
+        <item>Lebanon, NH</item>
+        <item>Hanover, NH</item>
+        <item>New London, NH</item>
+        <item>New York City, NY</item>
     </string-array>
+
+    <string-array name="arrival_type_array_zero">
+        <item>Lebanon, NH</item>
+        <item>Hanover, NH</item>
+        <item>New London, NH</item>
+    </string-array>
+
+    <string-array name="arrival_type_array_one">
+        <item>Logan Airport, Boston, MA</item>
+        <item>South Station, Boston, MA</item>
+        <item>New York City, NY</item>
+    </string-array>
+
+    <string-array name="departure_time_array_zero">
+        <item>6:30 AM</item>
+        <item>9:15 AM</item>
+        <item>2:30 PM</item>
+    </string-array>
+
 </resources>

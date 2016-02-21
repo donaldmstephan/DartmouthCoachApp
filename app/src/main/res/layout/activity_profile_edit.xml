@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left"
+        ></LinearLayout>
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:id="@+id/category"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:autoText="false"
+        android:maxWidth="160dp"
+        android:textSize="12dp" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_marginRight="20dp"
+        android:layout_alignBottom="@+id/category"
+        android:layout_alignParentEnd="true"
+
+        android:imeOptions="flagNoExtractUi"
+        android:focusableInTouchMode="true"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="Comfirm"
+        android:id="@+id/comfirm"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="#1a8af5"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+</RelativeLayout>
