@@ -2,6 +2,7 @@ package com.dartmouth.cs.dartmouthcoach;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -27,6 +28,8 @@ public class MyTicketFragment extends Fragment {
     public List<TicketEntry> dbEntries;
     private ArrayAdapter<String> mAdapter;
 
+    public static final int RESULT_OK = 0;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -41,6 +44,13 @@ public class MyTicketFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+
+        loadList();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
         loadList();
     }
@@ -60,7 +70,13 @@ public class MyTicketFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                //add in the clicker
+                int itemPosition = position;
+                TicketEntry tmp = dbEntries.get(itemPosition);
+                long value = tmp.getId();
+
+                Intent intent = new Intent(view.getContext(), ViewTicketActivity.class);
+                intent.putExtra("POSITION", value);
+                startActivityForResult(intent, RESULT_OK);
             }
         });
     }

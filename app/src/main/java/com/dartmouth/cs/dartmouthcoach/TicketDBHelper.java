@@ -103,15 +103,16 @@ public class TicketDBHelper extends SQLiteOpenHelper {
 
         TicketEntry indexEntry = new TicketEntry();
 
-        Date date = new Date(Long.parseLong(cursor.getString(0)));
+        indexEntry.setId(Long.parseLong(cursor.getString(0)));
+        Date date = new Date(Long.parseLong(cursor.getString(1)));
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
         indexEntry.setDateTime(cal);
 
-        indexEntry.setDepartureTime(cursor.getString(1));
-        indexEntry.setArrivalTime(cursor.getString(2));
-        indexEntry.setDepartureLocation(cursor.getString(3));
-        indexEntry.setArrivalLocation(cursor.getString(4));
+        indexEntry.setDepartureTime(cursor.getString(2));
+        indexEntry.setArrivalTime(cursor.getString(3));
+        indexEntry.setDepartureLocation(cursor.getString(4));
+        indexEntry.setArrivalLocation(cursor.getString(5));
 
         return indexEntry;
     }
@@ -126,6 +127,7 @@ public class TicketDBHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst() != false) {
             TicketEntry indexEntry = new TicketEntry();
 
+            indexEntry.setId(Long.parseLong(cursor.getString(0)));
             Date date = new Date(Long.parseLong(cursor.getString(1)));
             Calendar cal = Calendar.getInstance();
             cal.setTime(date);
@@ -142,6 +144,7 @@ public class TicketDBHelper extends SQLiteOpenHelper {
         while (cursor.moveToNext() != false) {
             TicketEntry indexEntry = new TicketEntry();
 
+            indexEntry.setId(Long.parseLong(cursor.getString(0)));
             Date date = new Date(Long.parseLong(cursor.getString(1)));
             Calendar cal = Calendar.getInstance();
             cal.setTime(date);

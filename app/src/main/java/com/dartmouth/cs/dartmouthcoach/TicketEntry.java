@@ -11,7 +11,7 @@ public class TicketEntry {
     private String mArrivalTime;
     private String mDepartureLocation;
     private String mArrivalLocation;
-
+    private Long mId;
 
     public Calendar getDateTime() {
         return mDateTime;
@@ -51,5 +51,13 @@ public class TicketEntry {
 
     public void setArrivalLocation(String mArrivalLocation) {
         this.mArrivalLocation = mArrivalLocation;
+    }
+
+    public Long getId() {
+        return mId;
+    }
+
+    public void setId(Long mId) {
+        this.mId = mId;
     }
 }

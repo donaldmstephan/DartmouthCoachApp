@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="departure_text" type="id">Departure Text</item>
+    <item name="arrival_text" type="id">Arrival Text</item>
+    <item name="time_text" type="id">Time Text</item>
+</resources>

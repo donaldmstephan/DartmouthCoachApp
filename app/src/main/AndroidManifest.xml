@@ -35,10 +35,11 @@
         </activity>
         <activity
             android:name=".DetailedMap"
-            android:label="Trip Tracker Map"></activity>
+            android:label="Trip Tracker Map" />
         <activity
             android:name=".AddCardActivity"
-            android:label="Add Card"></activity>
+            android:label="Add Card" />
+        <activity android:name=".ViewTicketActivity"></activity>
     </application>
 
 </manifest>
