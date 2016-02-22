@@ -37,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         setupDrawerContent(navigationView);
 
-        //Create a grid fragment to start the view on
-        ScheduleFragment sFrag = new ScheduleFragment();
+        //Create a schedule fragment to start the view on
+        IntroScreenFragment iFrag = new IntroScreenFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.flContent, sFrag).commit();
+        fragmentManager.beginTransaction().replace(R.id.flContent, iFrag).commit();
 
     }
 
@@ -104,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.nav_payment_settings:
                 fragmentClass = PaymentSettingsFragment.class;
+                break;
+            case R.id.nav_help:
+                fragmentClass = HelpFragment.class;
                 break;
             default:
                 fragmentClass = ScheduleFragment.class;
