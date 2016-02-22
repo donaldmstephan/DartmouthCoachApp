@@ -77,7 +77,7 @@ public class MyTicketFragment extends Fragment {
             fromColumns = new ArrayList<>();
 
             for ( TicketEntry t : dbEntries) {
-                fromColumns.add(t.getDepartureLocation().toString() + " " + String.valueOf(t.getDateTime().get(Calendar.MONTH) + 1) + "/" + t.getDateTime().get(Calendar.DATE) + "/" + t.getDateTime().get(Calendar.YEAR));
+                fromColumns.add( "\n" + t.getDepartureLocation().toString() + " To " + t.getArrivalLocation().toString() + " \n" + "Depart: " + t.getDepartureTime() + "  |  Arrive: " + t.getArrivalTime().toString() + "  |  " + String.valueOf(t.getDateTime().get(Calendar.MONTH) + 1) + "/" + t.getDateTime().get(Calendar.DATE) + "/" + t.getDateTime().get(Calendar.YEAR) + "\n");
             }
 
             mAdapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, fromColumns);

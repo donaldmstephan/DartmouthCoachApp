@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.os.AsyncTask;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -75,20 +77,23 @@ public class PurchaseTicketFragment extends Fragment implements View.OnClickList
 
         switch (v.getId()) {
             case R.id.purchase_button:
-                //TicketDBHelper db = new TicketDBHelper(v.getContext());
                 TicketEntry ticket = new TicketEntry();
+
+                Log.d("DB Insert", mDateAndTime.getTime().toString() + " " + departure.getSelectedItem().toString());
 
                 ticket.setDateTime(mDateAndTime);
                 ticket.setDepartureTime(departure_time.getSelectedItem().toString());
-                ticket.setArrivalTime("Null");
+                ticket.setArrivalTime("null");
                 ticket.setDepartureLocation(departure.getSelectedItem().toString());
                 ticket.setArrivalLocation(arrival.getSelectedItem().toString());
 
                 AddTicket task = new AddTicket(ticket);
                 task.doInBackground();
 
+                Toast.makeText(v.getContext(),"Ticket Purchased", Toast.LENGTH_SHORT).show();
 
                 break;
+
             case R.id.date_button:
                 DatePickerDialog.OnDateSetListener mDateListener = new DatePickerDialog.OnDateSetListener() {
                     public void onDateSet(DatePicker view, int year, int monthOfYear,
@@ -145,7 +150,6 @@ public class PurchaseTicketFragment extends Fragment implements View.OnClickList
 
         @Override
         protected Void doInBackground(Void... unused) {
-            //db = new EntryDBHelper(thi);
             db.insertEntry(entry);
 
             return null;
