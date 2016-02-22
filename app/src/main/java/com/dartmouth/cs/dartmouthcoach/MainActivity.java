@@ -10,6 +10,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,8 +19,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<Fragment> fragment;
+    private Fragment fragment;
     private DrawerLayout drawer;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +29,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle("Dartmouth Coach");
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Dartmouth Coach");
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -83,30 +86,37 @@ public class MainActivity extends AppCompatActivity {
     public void selectDrawerItem(MenuItem menuItem) {
         // Create a new fragment and specify the planet to show based on
         // position
-        Fragment fragment = null;
+        fragment = null;
 
         Class fragmentClass;
         switch(menuItem.getItemId()) {
             case R.id.nav_schedule:
                 fragmentClass = ScheduleFragment.class;
+                toolbar.setTitle("Schedule");
                 break;
             case R.id.nav_purchase_tickets:
                 fragmentClass = PurchaseTicketFragment.class;
+                toolbar.setTitle("Purchase Ticket");
                 break;
             case R.id.nav_tracker:
                 fragmentClass = TrackerFragment.class;
+                toolbar.setTitle("Trip Tracker");
                 break;
             case R.id.nav_my_tickets:
                 fragmentClass = MyTicketFragment.class;
+                toolbar.setTitle("My Tickets");
                 break;
             case R.id.nav_profile:
                 fragmentClass = ProfileFragment.class;
+                toolbar.setTitle("Profile");
                 break;
             case R.id.nav_payment_settings:
                 fragmentClass = PaymentSettingsFragment.class;
+                toolbar.setTitle("Payment Settings");
                 break;
             case R.id.nav_help:
                 fragmentClass = HelpFragment.class;
+                toolbar.setTitle("Help");
                 break;
             default:
                 fragmentClass = ScheduleFragment.class;

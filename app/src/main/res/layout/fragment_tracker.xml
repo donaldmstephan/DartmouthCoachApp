@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estimated Traffic Delay: 20 minutes"
+            android:textSize="20dp"
+            android:textColor="#000000"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estimated Arrival Time: 2:40 PM"
+            android:textSize="20dp"
+            android:textColor="#000000"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tracker"/>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/detail_map"
+            android:text="Show Detailed Map"></Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/detail_eta"
+            android:text="Show Detailed Map"></Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/share_time"
+            android:text="Share Time"></Button>
+    </LinearLayout>
 </LinearLayout>
