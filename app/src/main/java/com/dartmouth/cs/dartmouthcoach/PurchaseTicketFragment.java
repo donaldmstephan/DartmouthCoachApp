@@ -1,9 +1,9 @@
 package com.dartmouth.cs.dartmouthcoach;
 
 import android.app.DatePickerDialog;
+import android.os.AsyncTask;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +25,9 @@ public class PurchaseTicketFragment extends Fragment implements View.OnClickList
     private Spinner airline;
     private Spinner departure_time;
     private Button dateButton;
+
+    private TicketDBHelper db;
+
     private Calendar mDateAndTime = Calendar.getInstance();
 
     @Override
@@ -62,10 +65,7 @@ public class PurchaseTicketFragment extends Fragment implements View.OnClickList
         dateButton = (Button) v.findViewById(R.id.date_button);
         dateButton.setText(String.format("%1$tA %1$tb %1$td %1$tY", mDateAndTime));
 
-        // Set the other spinners to invisible
-        /*city.setVisibility(View.INVISIBLE);
-        destination.setVisibility(View.INVISIBLE);
-        departure_time.setVisibility(View.INVISIBLE);*/
+        db = new TicketDBHelper(v.getContext());
 
         return v;
     }
@@ -75,6 +75,19 @@ public class PurchaseTicketFragment extends Fragment implements View.OnClickList
 
         switch (v.getId()) {
             case R.id.purchase_button:
+                //TicketDBHelper db = new TicketDBHelper(v.getContext());
+                TicketEntry ticket = new TicketEntry();
+
+                ticket.setDateTime(mDateAndTime);
+                ticket.setDepartureTime(departure_time.getSelectedItem().toString());
+                ticket.setArrivalTime("Null");
+                ticket.setDepartureLocation(departure.getSelectedItem().toString());
+                ticket.setArrivalLocation(arrival.getSelectedItem().toString());
+
+                AddTicket task = new AddTicket(ticket);
+                task.doInBackground();
+
+
                 break;
             case R.id.date_button:
                 DatePickerDialog.OnDateSetListener mDateListener = new DatePickerDialog.OnDateSetListener() {
@@ -120,5 +133,22 @@ public class PurchaseTicketFragment extends Fragment implements View.OnClickList
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
         // Don't need
+    }
+
+    class AddTicket extends AsyncTask<Void, String, Void> {
+
+        TicketEntry entry;
+
+        public AddTicket(TicketEntry ticket) {
+            entry = ticket;
+        }
+
+        @Override
+        protected Void doInBackground(Void... unused) {
+            //db = new EntryDBHelper(thi);
+            db.insertEntry(entry);
+
+            return null;
+        }
     }
 }
