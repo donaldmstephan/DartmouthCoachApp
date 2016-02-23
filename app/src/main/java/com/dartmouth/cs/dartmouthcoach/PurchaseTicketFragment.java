@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Calendar;
@@ -27,6 +28,7 @@ public class PurchaseTicketFragment extends Fragment implements View.OnClickList
     private Spinner airline;
     private Spinner departure_time;
     private Button dateButton;
+    private View v;
 
     private TicketDBHelper db;
 
@@ -37,7 +39,7 @@ public class PurchaseTicketFragment extends Fragment implements View.OnClickList
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_purchase_tickets, container, false);
+        v = inflater.inflate(R.layout.fragment_purchase_tickets, container, false);
 
         // Add button clickers
         Button purchase = (Button) v.findViewById(R.id.purchase_button);
@@ -83,7 +85,7 @@ public class PurchaseTicketFragment extends Fragment implements View.OnClickList
 
                 ticket.setDateTime(mDateAndTime);
                 ticket.setDepartureTime(departure_time.getSelectedItem().toString());
-                ticket.setArrivalTime("null");
+                ticket.setArrivalTime("1:00 PM");
                 ticket.setDepartureLocation(departure.getSelectedItem().toString());
                 ticket.setArrivalLocation(arrival.getSelectedItem().toString());
 
@@ -131,6 +133,16 @@ public class PurchaseTicketFragment extends Fragment implements View.OnClickList
                     arrival.setAdapter(arrival_adapter);
                 }
                 break;
+
+            case R.id.departure_time_spinner:
+                if (position == 0) {
+                    TextView tv = (TextView) v.findViewById(R.id.price_text);
+                    tv.setText("Price: $38.00");
+                }
+                else {
+                    TextView tv = (TextView) v.findViewById(R.id.price_text);
+                    tv.setText("Price: $45.00");
+                }
         }
     }
 

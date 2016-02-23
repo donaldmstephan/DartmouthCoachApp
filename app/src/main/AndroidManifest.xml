@@ -40,6 +40,7 @@
             android:name=".AddCardActivity"
             android:label="Add Card" />
         <activity android:name=".ViewTicketActivity"></activity>
+        <activity android:name=".ProfileEdit"></activity>
     </application>
 
 </manifest>

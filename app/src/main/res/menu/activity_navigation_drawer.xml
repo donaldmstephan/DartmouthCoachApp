@@ -16,7 +16,7 @@
             android:title="My Tickets" />
     </group>
 
-    <item android:title="Preferences">
+    <item android:title="User">
         <menu>
             <group android:checkableBehavior="single">
             <item

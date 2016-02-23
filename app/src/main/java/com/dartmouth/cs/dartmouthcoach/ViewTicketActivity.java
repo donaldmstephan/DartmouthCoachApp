@@ -24,7 +24,7 @@ public class ViewTicketActivity extends AppCompatActivity {
         db = new TicketDBHelper(this);
         TicketEntry t = db.fetchEntryByIndex(value);
 
-        setTitle(t.getDepartureLocation() + " To " + t.getArrivalLocation());
+        setTitle("My Tickets");
 
         TextView tv = (TextView) findViewById(R.id.departure_text);
         tv.setText(t.getDepartureLocation() + " To " + t.getArrivalLocation());

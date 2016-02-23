@@ -109,6 +109,7 @@ public class ProfileFragment extends Fragment {
             switch (resultCode) {
                 case 1:
                     mSSN.setText(newinfo);
+                    mUserName.setText(newinfo);
                     break;
                 case 2:
                     mDriveNum.setText(newinfo);

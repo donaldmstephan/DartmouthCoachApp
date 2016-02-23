@@ -13,8 +13,13 @@
         android:orderInCategory="1"/>
 
     <item
+        android:id="@+id/action_find_station"
+        android:title="Find Departure Station"
+        android:orderInCategory="2"/>
+
+    <item
         android:id="@+id/action_return"
         android:title="Return Ticket"
-        android:orderInCategory="2"/>
+        android:orderInCategory="3"/>
 
 </menu>

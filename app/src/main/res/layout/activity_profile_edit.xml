@@ -35,7 +35,7 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="40dp"
-        android:text="Comfirm"
+        android:text="Confirm"
         android:id="@+id/comfirm"
         android:layout_marginRight="20dp"
         android:layout_below="@+id/editText"
