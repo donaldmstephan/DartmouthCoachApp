@@ -35,10 +35,10 @@ public class ProfileEdit extends AppCompatActivity {
 
         switch (type) {
             case 1:
-                mCategory.setText("SSN");
+                mCategory.setText("First Name");
                 break;
             case 2:
-                mCategory.setText("DriveLicense#");
+                mCategory.setText("Last Name");
                 break;
             case 3:
                 mCategory.setText("Phone Number");

@@ -1,9 +1,12 @@
 package com.dartmouth.cs.dartmouthcoach;
 
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
+import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -92,7 +95,15 @@ public class PurchaseTicketFragment extends Fragment implements View.OnClickList
                 AddTicket task = new AddTicket(ticket);
                 task.doInBackground();
 
-                Toast.makeText(v.getContext(),"Ticket Purchased", Toast.LENGTH_SHORT).show();
+                new AlertDialog.Builder(this.getContext())
+                        .setTitle("Notification")
+                        .setMessage("Purchase ticket?")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                Toast.makeText(getContext(), "Ticket Purchased", Toast.LENGTH_LONG).show();
+                            }})
+                        .setNegativeButton(android.R.string.no, null).show();
 
                 break;
 

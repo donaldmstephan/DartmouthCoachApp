@@ -9,14 +9,16 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_gravity="left|bottom">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Boston Service | Southbound"
+                android:text="
+      Boston Service | Southbound"
                 android:textSize="24dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
@@ -42,39 +44,37 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Leaves Hanover, NH           5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
+                        android:text="Leaves Hanover, NH...........5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
                         android:textSize="18dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Leaves Lebanon, NH           5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Leaves Lebanon, NH...........5:20am   7:20am   9:20am   11:20am   12:20pm   1:20pm   3:20pm   5:20pm   "                        android:textSize="18dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Leaves New London, NH    5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Leaves New London, NH....5:50am   7:50am   9:50am   11:50am   12:50pm   1:50pm   3:50pm   5:50pm   "                        android:textSize="18dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Arrives Boston, MA              5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Arrives Boston, MA..............7:50am   9:35am   11:35am   1:35pm     2:35am   3:35pm   5:35pm   7:35pm   "                        android:textSize="18dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Arrives Logan Airport, MA   5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Arrives Logan Airport, MA...8:05am   9:50am   11:50am   1:50pm     2:50pm   3:50pm   5:50pm   7:50pm   "                        android:textSize="18dp"/>
 
                 </LinearLayout>
             </HorizontalScrollView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Boston Service | Northbound"
+                android:text="
+      Boston Service | Northbound"
                 android:textSize="24dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:paddingTop="16dp"/>
+
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
@@ -96,28 +96,23 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Leaves Hanover, NH           5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Leaves Logan Airport.........8:55am   10:55am   12:55pm   2:55pm   3:55pm   4:55pm   6:55pm   8:55pm   "                    android:textSize="18dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Leaves Lebanon, NH           5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Leaves Boston, MA.............9:30am   11:30am    1:30pm   3:30pm    4:30pm   5:30pm   7:30pm   9:30pm   "                    android:textSize="18dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Leaves New London, NH    5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Arrives New London, NH....11:15am   1:15pm    3:15pm   5:15pm   6:15pm   7:15pm   9:15pm   11:15pm   "                    android:textSize="18dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Arrives Boston, MA              5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Arrives Lebanon, NH...........11:45am   1:45pm    3:45pm   5:45pm   6:45pm   7:45pm   9:45pm   11:45pm   "                    android:textSize="18dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Arrives Logan Airport, MA   5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Arrives Hanover, NH...........12:00pm   2:00pm    4:00pm   6:00pm   7:00pm   8:00pm  10:00pm   12:00pm   "                    android:textSize="18dp"/>
 
                 </LinearLayout>
 
@@ -125,7 +120,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New York Service | Southbound"
+                android:text="
+      New York Service | Southbound"
                 android:textSize="24dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
@@ -145,24 +141,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="Location:                                Daily:       Daily:        Daily:       Daily:       Daily:       Daily:       Daily:       Daily:      "
-                        android:textSize="18dp"/>
+                        android:text="Location:                                     Monday:               Tuesday:              Wednesday:              Thursday:                           Friday:                          Saturday:                         Sunday:      "                    android:textSize="18dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Leaves Lebanon, NH           5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Leaves Lebanon, NH..........6:15am   2:15pm   6:15am   2:15pm   6:15am   2:15pm   6:15am   2:15pm   6:15am   9:15am   2:15pm   6:15am   2:15pm   6:15am   9:15am   3:15pm   "                    android:textSize="18dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Leaves Hanover, NH           5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Leaves Hanover, NH...........6:30am   2:30pm   6:30am   2:30pm   6:30am   2:30pm   6:30am   2:30pm   6:30am   9:30am   2:30pm   6:30am   2:30pm   6:30am   9:30am  3:30pm   "                    android:textSize="18dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Arrives New York, NY          5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Arrives New York, NY.........11:30am  7:30pm  11:30am  7:30pm 11:30am  7:30pm  11:30am  7:30pm  11:30am  2:45pm   7:30pm  11:30am  2:45pm 11:30am  2:45pm   8:30pm   "                    android:textSize="18dp"/>
 
                 </LinearLayout>
 
@@ -170,7 +162,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New York Service | Northbound"
+                android:text="
+      New York Service | Northbound"
                 android:textSize="24dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
@@ -190,24 +183,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="Location:                                Daily:       Daily:       Daily:       Daily:       Daily:       Daily:       Daily:       Daily:      "
-                        android:textSize="18dp"/>
+                        android:text="Location:                                     Monday:               Tuesday:              Wednesday:              Thursday:                           Friday:                          Saturday:                         Sunday:      "                    android:textSize="18dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Leaves New York, NY         5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Leaves New York, NY........8:30am   1:30pm   8:30am   1:30pm   8:30am   1:30pm   8:30am   1:30pm   8:30am   1:30pm   4:30pm   8:30am   1:30pm   10:30am   1:30pm   4:30pm   "                    android:textSize="18dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Arrives Hanover, NH           5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Arrives Hanover, NH..........1:15pm   6:20pm   1:15pm   6:20pm   1:15pm   6:20pm   1:15pm   6:20pm   1:15pm   6:20pm   9:15pm   1:15pm   6:20pm   3:15pm   6:20pm  9:15pm   "                    android:textSize="18dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Arrives Lebanon, NH           5:00am   7:00am   9:00am   11:00am   12:00am   1:00pm   3:00pm   5:00pm   "
-                        android:textSize="18dp"/>
+                        android:text="Arrives Lebanon, NH..........1:30pm   6:35pm   1:30pm   6:35pm   1:30pm   6:35pm   1:30pm   6:35pm   1:30pm   6:35pm   9:30pm   1:30pm   6:35pm   1:30pm   6:35pm   9:30pm   "                    android:textSize="18dp"/>
 
                 </LinearLayout>
 

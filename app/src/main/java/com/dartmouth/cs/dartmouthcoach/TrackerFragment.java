@@ -37,13 +37,16 @@ import java.util.Locale;
  * Created by Donald on 2/18/2016.
  */
 public class TrackerFragment extends Fragment {
+    private View v;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        return inflater.inflate(R.layout.fragment_tracker, container, false);
+        v = inflater.inflate(R.layout.fragment_tracker, container, false);
+
+        return v;
     }
 
     @Override
@@ -60,7 +63,8 @@ public class TrackerFragment extends Fragment {
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Message has been sent", Toast.LENGTH_SHORT).show();
+                ShareDialog cdd = new ShareDialog(getActivity());
+                cdd.show();
             }
         });
     }

@@ -118,7 +118,20 @@
             android:hint="FirstName LastName"
             android:textColor="#000000" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Billing address"
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:hint="Apt, Street, City, State, Zip code"
+            android:textColor="#000000" />
         -
 
         <LinearLayout

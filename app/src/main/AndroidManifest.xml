@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -39,8 +40,16 @@
         <activity
             android:name=".AddCardActivity"
             android:label="Add Card" />
-        <activity android:name=".ViewTicketActivity"></activity>
-        <activity android:name=".ProfileEdit"></activity>
+        <activity android:name=".ViewTicketActivity" />
+        <activity android:name=".ProfileEdit" />
+        <activity
+            android:name=".ShareDialog"
+            android:label="@string/title_activity_share_dialog"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AirportLocationActivity"
+            android:label="@string/title_activity_airport_location"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
